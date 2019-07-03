@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<Actions>
+	<Action id="actionAllZonesOn">
+		<Name>Turn All Zones On</Name>
+		<CallbackMethod>actionAllZonesOn</CallbackMethod>
+	</Action>
+	<Action id="actionAllZonesOff">
+		<Name>Turn All Zones Off</Name>
+		<CallbackMethod>actionAllZonesOff</CallbackMethod>
+	</Action>
+	<Action id="actionTurnZoneOn" deviceFilter="self.russoundZone">
+		<Name>Turn Zone On</Name>
+		<CallbackMethod>actionTurnZoneOn</CallbackMethod>
+	</Action>
+	<Action id="actionTurnZoneOff" deviceFilter="self.russoundZone">
+		<Name>Turn Zone Off</Name>
+		<CallbackMethod>actionTurnZoneOff</CallbackMethod>
+	</Action>
+	<Action id="actionSetZoneSource" deviceFilter="self.russoundZone">
+		<Name>Set Zone Source</Name>
+		<CallbackMethod>actionSetZoneSource</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting" type="menu">
+				<Label>Source:</Label>
+				<List class="self" method="getSourceList"/>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionSetZoneVolume" deviceFilter="self.russoundZone">
+		<Name>Set Zone Volume Level</Name>
+		<CallbackMethod>actionSetZoneVolume</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting" type="menu">
+				<Label>Volume Level:</Label>
+				<List class="self" method="getVolumeList"/>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionSetZoneBalance" deviceFilter="self.russoundZone">
+		<Name>Set Zone Balance</Name>
+		<CallbackMethod>actionSetZoneBalance</CallbackMethod>
+		<ConfigUI>
+			<Field id="infoLabel" type="label">
+				<Label>Negative = Left, Positive = Right</Label>
+			</Field>
+			<Field id="setting" type="menu">
+				<Label>Balance:</Label>
+				<List class="self" method="getBassTrebleBalanceList"/>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionTurnBalanceLeft" deviceFilter="self.russoundZone">
+		<Name>Turn Balance Left</Name>
+		<CallbackMethod>actionTurnBalanceLeft</CallbackMethod>
+	</Action>
+	<Action id="actionTurnBalanceRight" deviceFilter="self.russoundZone">
+		<Name>Turn Balance Right</Name>
+		<CallbackMethod>actionTurnBalanceRight</CallbackMethod>
+	</Action>
+	<Action id="actionSetZoneBass" deviceFilter="self.russoundZone">
+		<Name>Set Zone Bass Level</Name>
+		<CallbackMethod>actionSetZoneBass</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting" type="menu">
+				<Label>Bass Level:</Label>
+				<List class="self" method="getBassTrebleBalanceList"/>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionTurnBassUp" deviceFilter="self.russoundZone">
+		<Name>Turn Bass Up</Name>
+		<CallbackMethod>actionTurnBassUp</CallbackMethod>
+	</Action>
+	<Action id="actionTurnBassDown" deviceFilter="self.russoundZone">
+		<Name>Turn Bass Down</Name>
+		<CallbackMethod>actionTurnBassDown</CallbackMethod>
+	</Action>
+	<Action id="actionSetZoneTreble" deviceFilter="self.russoundZone">
+		<Name>Set Zone Treble Level</Name>
+		<CallbackMethod>actionSetZoneTreble</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting" type="menu">
+				<Label>Treble Level:</Label>
+				<List class="self" method="getBassTrebleBalanceList"/>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionTurnTrebleUp" deviceFilter="self.russoundZone">
+		<Name>Turn Treble Up</Name>
+		<CallbackMethod>actionTurnTrebleUp</CallbackMethod>
+	</Action>
+	<Action id="actionTurnTrebleDown" deviceFilter="self.russoundZone">
+		<Name>Turn Treble Down</Name>
+		<CallbackMethod>actionTurnTrebleDown</CallbackMethod>
+	</Action>
+	<Action id="actionSetZoneLoudnessOn" deviceFilter="self.russoundZone">
+		<Name>Set Zone Loudness On</Name>
+		<CallbackMethod>actionSetZoneLoudnessOn</CallbackMethod>
+	</Action>
+	<Action id="actionSetZoneLoudnessOff" deviceFilter="self.russoundZone">
+		<Name>Set Zone Loudness Off</Name>
+		<CallbackMethod>actionSetZoneLoudnessOff</CallbackMethod>
+	</Action>
+	<Action id="actionKeypad" deviceFilter="self.russoundZone">
+		<Name>Keypad Button</Name>
+		<CallbackMethod>actionKeyPadEvent</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting" type="menu">
+				<Label>Action:</Label>
+				<List class="self" method="getKeypadEventList"/>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionSourceControl" deviceFilter="self.russoundZone">
+		<Name>Source Control Button</Name>
+		<CallbackMethod>actionSourceControlEvent</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting" type="menu">
+				<Label>Action:</Label>
+				<List class="self" method="getSourceControlEventList"/>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionSendMessageToAllZonea">
+		<Name>Send Text Message To All Zones</Name>
+		<CallbackMethod>actionSendMessageToAllZones</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting_flash" type="menu">
+				<Label>Flash Time:</Label>
+				<List class="self" method="getFlashTimesList"/>
+			</Field>
+			<Field id="setting" type="textfield" defaultValue="Hello World">
+			    <Label>Message:</Label>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionSendMessageToZone" deviceFilter="self.russoundZone">
+		<Name>Send Text Message To Zone</Name>
+		<CallbackMethod>actionSendMessageToZone</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting_flash" type="menu">
+				<Label>Flash Time:</Label>
+				<List class="self" method="getFlashTimesList"/>
+			</Field>
+			<Field id="setting" type="textfield" defaultValue="Hello World">
+			    <Label>Message:</Label>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionUpdateDisplayMessageInZone" deviceFilter="self.russoundZone">
+		<Name>Update Display Message in Zone</Name>
+		<CallbackMethod>actionUpdateDisplayMessageInZone</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting" type="textfield" defaultValue="Hello World">
+			    <Label>Message:</Label>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionSendSourceBroadcast">
+		<Name>Send Source Broadcast Message</Name>
+		<CallbackMethod>actionSendSourceBroadcast</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting_source" type="menu">
+				<Label>Source:</Label>
+				<List class="self" method="getSourceList"/>
+			</Field>
+			<Field id="setting_flash" type="menu">
+				<Label>Flash Time:</Label>
+				<List class="self" method="getFlashTimesList"/>
+			</Field>
+			<Field id="setting" type="textfield" defaultValue="Hello World">
+			    <Label>Message:</Label>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionSendMultiFieldBroadcast">
+		<Name>Send Source MultiField Broadcast Message</Name>
+		<CallbackMethod>actionSendMultiFieldBroadcast</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting_source" type="menu">
+				<Label>Source:</Label>
+				<List class="self" method="getSourceList"/>
+			</Field>
+			<Field id="setting_field" type="menu">
+				<Label>Field:</Label>
+				<List class="self" method="getFieldIDList"/>
+			</Field>
+			<Field id="setting" type="textfield" defaultValue="Hello World">
+			    <Label>Message:</Label>
+			</Field>
+		</ConfigUI>		
+	</Action>
+	<Action id="actionPollAllZones">
+		<Name>Poll All Zones</Name>
+		<CallbackMethod>actionPollAllZones</CallbackMethod>
+	</Action>
+	<Action id="actionPollZone" deviceFilter="self.russoundZone">
+		<Name>Poll Zone</Name>
+		<CallbackMethod>actionPollZone</CallbackMethod>
+	</Action>
+	<Action id="actionDirectTuning">
+		<Name>Enter Station for ST2 Tuner</Name>
+		<CallbackMethod>actionDirectTuning</CallbackMethod>
+		<ConfigUI>       
+			<Field id="setting_source" type="menu">
+				<Label>Source:</Label>
+				<List class="self" method="getSourceList"/>
+			</Field>
+			<Field id="setting" type="textfield" defaultValue="95.9">
+			    <Label>Station:</Label>
+			</Field>
+		</ConfigUI>		
+	</Action>
+</Actions>

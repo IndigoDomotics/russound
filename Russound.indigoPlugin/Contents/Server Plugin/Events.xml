@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Events>
+    <Event id="keypadEvent" deviceFilter="self.russoundZone">
+        <Name>Keypad Event</Name>
+		<ConfigUI>       
+			<Field id="eventID" type="menu">
+				<Label>Button:</Label>
+				<List class="self" method="getKeypadEventList"/>
+			</Field>
+			<Field id="deviceId" type="menu">
+				<Label>On Zone:</Label>
+				<List class="self" filter="withAny" method="getZoneDeviceList"/>
+			</Field>
+			<Field id="sourceID" type="menu">
+				<Label>Set To Source:</Label>
+				<List class="self" filter="withAny" method="getSourceList"/>
+			</Field>
+		</ConfigUI>		
+    </Event> 
+    <Event id="sourceControlEvent" deviceFilter="self.russoundZone">
+        <Name>Source Control Event</Name>
+		<ConfigUI>       
+			<Field id="eventID" type="menu">
+				<Label>Button:</Label>
+				<List class="self" method="getSourceControlEventList"/>
+			</Field>
+			<Field id="deviceId" type="menu">
+				<Label>On Zone:</Label>
+				<List class="self" filter="withAnyCurrent" method="getZoneDeviceList"/>
+			</Field>
+			<Field id="sourceID" type="menu">
+				<Label>Set To Source:</Label>
+				<List class="self" filter="withAny" method="getSourceList"/>
+			</Field>
+		</ConfigUI>		
+    </Event> 
+</Events>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<Devices>
+	<Device type="custom" id="russoundZone">
+		<Name>Russound Zone</Name>
+		<ConfigUI>			
+			<Field id="controllerID" type="menu" defaultValue="00">
+				<Label>Controller Number:</Label>
+				<List class="self" method="getControllerList" />
+			</Field>
+			<Field id="zoneID" type="menu">
+				<Label>Zone Number:</Label>
+				<List class="self" method="getZoneList"/>
+			</Field>
+			<Field id="space0" type="label">
+				<Label></Label>
+			</Field>
+			<Field type="checkbox" id="zoneLogChanges" defaultValue="1">
+				<Label>Log Changes:</Label>
+				<Description></Description>
+			</Field>
+		</ConfigUI>
+		<UiDisplayStateId>Power</UiDisplayStateId>
+		<States>
+			<State id="Power">
+				<ValueType boolType="OnOff">Boolean</ValueType>
+				<TriggerLabel>Zone Power</TriggerLabel>
+				<ControlPageLabel>Zone Power</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="Source">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Source</TriggerLabel>
+				<ControlPageLabel>Source</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="SourceID">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Source Number</TriggerLabel>
+				<ControlPageLabel>Source Number</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="Volume">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Volume</TriggerLabel>
+				<ControlPageLabel>Volume</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="TurnOnVolume">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Turn On Volume</TriggerLabel>
+				<ControlPageLabel>Turn On Volume</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="Bass">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Bass</TriggerLabel>
+				<ControlPageLabel>Bass</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="Treble">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Treble</TriggerLabel>
+				<ControlPageLabel>Treble</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="Loudness">
+				<ValueType boolType="OnOff">Boolean</ValueType>
+				<TriggerLabel>Loudness</TriggerLabel>
+				<ControlPageLabel>Loudness</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="Balance">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Balance</TriggerLabel>
+				<ControlPageLabel>Balance</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="SystemOnState">
+				<ValueType>String</ValueType>
+				<TriggerLabel>System On state </TriggerLabel>
+				<ControlPageLabel>System On State</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="SharedSource">
+				<ValueType>Boolean</ValueType>
+				<TriggerLabel>Shared Source</TriggerLabel>
+				<ControlPageLabel>Shared Source</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="PartyMode">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Party Mode</TriggerLabel>
+				<ControlPageLabel>Party Mode</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="DoNotDisturb">
+				<ValueType boolType="OnOff">Boolean</ValueType>
+				<TriggerLabel>Do Not Disturb</TriggerLabel>
+				<ControlPageLabel>Do Not Disturb</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="DisplayMessage">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Display Message</TriggerLabel>
+				<ControlPageLabel>Display Message</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+			<State id="BGColor">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Background Color</TriggerLabel>
+				<ControlPageLabel>Background Color</ControlPageLabel>
+				<ControlPageLabelPrefix>State is</ControlPageLabelPrefix>
+			</State>
+		</States>
+	</Device>
+</Devices>

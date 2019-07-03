@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<MenuItems>
+    <MenuItem id="PollAllZones">
+        <Name>Poll All Zones</Name>
+        <CallbackMethod>menuPollAllZones</CallbackMethod>
+    </MenuItem>
+    <MenuItem id="TurnAllZonesOff">
+        <Name>Turn All Zones Off</Name>
+        <CallbackMethod>menuTurnAllZonesOff</CallbackMethod>
+    </MenuItem>
+</MenuItems>

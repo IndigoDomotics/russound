@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<PluginConfig>
+	<Field id="infoLabel" type="label">
+		<Label>Russound Plugin</Label>
+	</Field>
+    <Field id="simpleSeparator1" type="separator"/>
+	<Field type="menu" id="connectionType"  defaultValue="1"
+		 tooltip="The method that this plugin will comunicate with the Russound controller (receiver)">
+		<Label>Connection Type:</Label>
+		<List>
+			<Option value="1">Serial Port</Option>
+			<Option value="2">Socket</Option>
+		</List>
+	</Field>
+	<Field type="menu" id="serialPortName" visibleBindingId="connectionType" visibleBindingValue="1"
+            tooltip="The serial port that the Russound controller (receiver) is connected to.">
+		<Label>Serial Port:</Label>
+		<List class="indigo.serialPorts" filter="indigo.ignoreBluetooth" />
+	</Field>
+	<Field type="textfield" id="socketIP" visibleBindingId="connectionType" visibleBindingValue="2"
+            tooltip="The IP address of the socket e.g. 10.0.1.15">
+        <Label>IP:</Label>
+    </Field>
+	<Field type="textfield" id="socketPort" visibleBindingId="connectionType" visibleBindingValue="2"
+            tooltip="The port number of the socket e.g. 6072">
+        <Label>Port:</Label>
+    </Field>
+	<Field type="checkbox" id="showDebugInLog"
+		tooltip="This enables lots of debugging messages in the Indigo Event Log.">
+		<Label>Enable debugging:</Label>
+		<Description>(not recommended)</Description>
+	</Field>
+    <Field id="simpleSeparator2" type="separator"/>
+	<Field id="controllerType" type="menu"
+	tooltip="Which model of Russound Receiver">
+		<Label>Russound Controller Model:</Label>
+		<List class="self" method="getControllerTypeList"/>
+	</Field>
+	<Field id="numberOfControllers" type="menu" defaultValue="1"
+	tooltip="The number of Russound controllers (receivers) that are linked together using the RNET port on the back of the controller.">
+		<Label>Number of Controllers:</Label>
+		<List>
+			<Option value="1">1</Option>
+			<Option value="2">2</Option>
+			<Option value="3">3</Option>
+			<Option value="4">4</Option>
+			<Option value="5">5</Option>
+			<Option value="6">6</Option>
+		</List>
+	</Field>
+	<Field id="numberOfSources" type="menu" defaultValue="12"
+	tooltip="The number of sources that the Russound controller (reciever) has been configured for.">
+		<Label>Number of Sources:</Label>
+		<List>
+			<Option value="1">1</Option>
+			<Option value="2">2</Option>
+			<Option value="3">3</Option>
+			<Option value="4">4</Option>
+			<Option value="5">5</Option>
+			<Option value="6">6</Option>
+			<Option value="7">7</Option>
+			<Option value="8">8</Option>
+			<Option value="9">9</Option>
+			<Option value="10">10</Option>
+			<Option value="11">11</Option>
+			<Option value="12">12</Option>
+		</List>
+	</Field>
+	<Field id="nameOfSource1" tooltip="The name that you want Indigo to refer to for this source."
+            type="textfield">
+        <Label>Source 1 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource2" tooltip="The name that you want Indigo to refer to for this source."
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="2,3,4,5,6,7,8,9,10,11,12">
+        <Label>Source 2 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource3" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="3,4,5,6,7,8,9,10,11,12">
+        <Label>Source 3 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource4" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="4,5,6,7,8,9,10,11,12">
+        <Label>Source 4 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource5" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="5,6,7,8,9,10,11,12">
+        <Label>Source 5 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource6" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="6,7,8,9,10,11,12">
+        <Label>Source 6 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource7" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="7,8,9,10,11,12">
+        <Label>Source 7 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource8" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="8,9,10,11,12">
+        <Label>Source 8 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource9" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="9,10,11,12">
+        <Label>Source 9 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource10" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="10,11,12">
+        <Label>Source 10 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource11" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="11,12">
+        <Label>Source 11 Name:</Label>
+    </Field>	
+	<Field id="nameOfSource12" tooltip="The name that you want Indigo to refer to for this source." 
+            type="textfield" 
+            visibleBindingId="numberOfSources" 
+            visibleBindingValue="12">
+        <Label>Source 12 Name:</Label>
+    </Field>	
+</PluginConfig>
